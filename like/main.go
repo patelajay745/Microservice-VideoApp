@@ -18,14 +18,12 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	// s3Bucket := os.Getenv("S3_BUCKET")
-
 	//connect database
 	client := config.ConnectDB()
 
 	router := gin.Default()
 
-	router.Use(gin.Logger())
+	//router.Use(gin.Logger())
 	router.Use(cors.Default())
 
 	routes.SetupRouter(router, client)
