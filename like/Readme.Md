@@ -1,5 +1,3 @@
-Sure! Here's a comprehensive `README.md` for your Like microservice:
-
 ```markdown
 # Like Microservice
 
