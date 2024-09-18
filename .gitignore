@@ -1,3 +1,5 @@
 like/.env
 tweet/.env
+tweet/tmp
+tweet/bin
 

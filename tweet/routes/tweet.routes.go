@@ -13,11 +13,11 @@ func SetUpRouter(router *gin.Engine, client *mongo.Client) {
 	{
 		tweet.POST("/", middleware.VerifyJWT(), func(c *gin.Context) { controller.CreateTweet(c, client) })
 
-		tweet.GET("/user/:userID", func(c *gin.Context) { controller.GetUserTweets(c, client) })
+		tweet.GET("/user/:userID", middleware.VerifyJWT(), func(c *gin.Context) { controller.GetUserTweets(c, client) })
 
-		tweet.DELETE("/:tweetId", func(c *gin.Context) { controller.DeleteTweet(c, client) })
+		tweet.DELETE("/:tweetId", middleware.VerifyJWT(), func(c *gin.Context) { controller.DeleteTweet(c, client) })
 
-		tweet.PATCH("/:tweetId", func(c *gin.Context) { controller.UpdateTweet(c, client) })
+		tweet.PATCH("/:tweetId", middleware.VerifyJWT(), func(c *gin.Context) { controller.UpdateTweet(c, client) })
 
 	}
 
