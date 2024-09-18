@@ -3,25 +3,12 @@
 
 This microservice is responsible for handling "like" actions on videos, comments, and tweets. It is written in Go using the Gin framework and MongoDB as the database.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Routes](#routes)
-- [Models](#models)
-- [Middleware](#middleware)
-- [Controllers](#controllers)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Installation
 
 1. Clone the repository:
 2. Install dependencies:
    go mod tidy
 3. Set up your MongoDB instance and update the connection URI in the code.
-
 4. Run the service:
    go run main.go
 
