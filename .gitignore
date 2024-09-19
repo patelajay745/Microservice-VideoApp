@@ -1,5 +1,13 @@
 like/.env
 tweet/.env
+comment/.env
+dashboard/.env
+playlist/.env
+subscription/.env
+user/.env
+video/.env
+
+comment/tmp/
 tweet/tmp
 tweet/bin
 user/node_modules
