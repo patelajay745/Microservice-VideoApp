@@ -2,4 +2,6 @@ like/.env
 tweet/.env
 tweet/tmp
 tweet/bin
-
+user/node_modules
+playlist/node_modules
+video/node_modules
