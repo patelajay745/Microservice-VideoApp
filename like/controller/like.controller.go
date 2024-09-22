@@ -233,8 +233,6 @@ func GetLikedVideos(c *gin.Context, client *mongo.Client) {
 		},
 	})
 
-	fmt.Println("cursor", cursor)
-
 	if err != nil {
 		c.JSON(500, utils.ResError{
 			Success: false,
