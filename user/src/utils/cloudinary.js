@@ -1,13 +1,16 @@
 import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
 
+console.log(process.env.CLOUDINARY_CLOUD_NAME);
+console.log(process.env.CLOUDINARY_ACCESS_KEY);
+console.log(process.env.CLOUDINARY_ACCESS_TOKEN);
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_ACCESS_KEY,
   api_secret: process.env.CLOUDINARY_ACCESS_TOKEN,
 });
 
-export const deleteFileOnCloudinary = async (cloudinaryImageUrl, fileType) => {
+export const deleteFilrOnCloudinary = async (cloudinaryImageUrl, fileType) => {
   try {
     if (!cloudinaryImageUrl) return null;
     const publicId = cloudinaryImageUrl.split("/").pop().split(".")[0];
